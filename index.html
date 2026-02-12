@@ -11,10 +11,6 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="./styles.css" />
 
   <!-- 構造化データ（後で差し替え） -->
@@ -71,13 +67,24 @@
 
   <main id="main">
     <section class="hero hero--carousel">
-      <div class="heroSlider" data-hero-carousel>
-        <div class="heroSlider__track">
+      <div
+        class="heroSlider"
+        data-hero-carousel
+        role="region"
+        aria-roledescription="carousel"
+        aria-label="メインビジュアル"
+        aria-live="off"
+        tabindex="0"
+      >
+        <div class="heroSlider__track" role="list">
           <article class="heroSlide">
             <img
               class="heroSlide__img"
-              src="file:///C:/Users/taikan/.cursor/projects/c/assets/c__Users_taikan_AppData_Roaming_Cursor_User_workspaceStorage_8dbb746a03fac20de920e3ccafee9f78_images_image-c7502ec6-6fb7-4d3a-9783-c46e8be7e7df.png"
-              alt="女性モデル（イメージ）"
+              src="./assets/images/placeholder-16x9.svg"
+              alt="院内の雰囲気"
+              width="1600"
+              height="900"
+              fetchpriority="high"
               decoding="async"
             />
             <div class="heroSlide__overlay">
@@ -100,8 +107,10 @@
           <article class="heroSlide heroSlide--contain">
             <img
               class="heroSlide__img"
-              src="file:///C:/Users/taikan/.cursor/projects/c/assets/c__Users_taikan_AppData_Roaming_Cursor_User_workspaceStorage_8dbb746a03fac20de920e3ccafee9f78_images_image-d504f18f-f2b2-4519-ac23-524f883403ee.png"
-              alt="診療方針のビジュアル"
+              src="./assets/images/placeholder-16x9.svg"
+              alt="診療の様子"
+              width="1600"
+              height="900"
               loading="lazy"
               decoding="async"
             />
@@ -110,19 +119,26 @@
           <article class="heroSlide heroSlide--contain">
             <img
               class="heroSlide__img"
-              src="file:///C:/Users/taikan/.cursor/projects/c/assets/c__Users_taikan_AppData_Roaming_Cursor_User_workspaceStorage_8dbb746a03fac20de920e3ccafee9f78_images_image-bdec2bc0-a7a3-4df0-8ee2-e0aa7c31f4a2.png"
-              alt="診療方針のビジュアル"
+              src="./assets/images/placeholder-16x9.svg"
+              alt="スタッフの雰囲気"
+              width="1600"
+              height="900"
               loading="lazy"
               decoding="async"
             />
           </article>
         </div>
 
+        <div class="heroSlider__controls" aria-label="スライド操作">
+          <button class="heroControlBtn" type="button" data-carousel-prev aria-label="前へ">&lt;</button>
+          <button class="heroControlBtn" type="button" data-carousel-next aria-label="次へ">&gt;</button>
+          <button class="heroControlBtn heroControlBtn--toggle" type="button" data-carousel-toggle aria-pressed="true">停止</button>
+        </div>
 
-        <div class="heroSlider__dots" aria-hidden="true">
-          <span class="heroDot is-active"></span>
-          <span class="heroDot"></span>
-          <span class="heroDot"></span>
+        <div class="heroSlider__dots" role="tablist" aria-label="スライド選択">
+          <button class="heroDot is-active" type="button" data-carousel-dot="0" aria-label="1枚目" aria-current="true"></button>
+          <button class="heroDot" type="button" data-carousel-dot="1" aria-label="2枚目" aria-current="false"></button>
+          <button class="heroDot" type="button" data-carousel-dot="2" aria-label="3枚目" aria-current="false"></button>
         </div>
       </div>
 
@@ -172,8 +188,10 @@
         <div class="mediaWrap">
           <img
             class="media media--wide"
-            src="https://images.unsplash.com/photo-1581585004042-bca38021ce1e?auto=format&fit=crop&w=1600&q=80"
+            src="./assets/images/placeholder-16x9.svg"
             alt="診療のイメージ"
+            width="1600"
+            height="900"
             loading="lazy"
             decoding="async"
           />
@@ -209,8 +227,10 @@
             <!-- 画像差し替え: .media--doctor / srcはプロジェクト内の相対パスに変更 -->
             <img
               class="media media--doctor"
-              src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=800&q=80"
-              alt="スタッフのイメージ"
+              src="./assets/images/placeholder-1x1.svg"
+              alt="院長プロフィール写真"
+              width="800"
+              height="800"
               loading="lazy"
               decoding="async"
             />
@@ -251,12 +271,12 @@
 
         <div class="marquee" aria-label="スタッフ紹介ギャラリー">
           <div class="marquee__track">
-            <img class="marquee__img" src="https://images.unsplash.com/photo-1663182120513-9effe46f79f5?auto=format&fit=crop&w=800&q=80" alt="診療の様子" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="https://images.unsplash.com/photo-1581585004042-bca38021ce1e?auto=format&fit=crop&w=800&q=80" alt="歯科スタッフのイメージ" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=800&q=80" alt="チームのイメージ" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="https://images.unsplash.com/photo-1663182120513-9effe46f79f5?auto=format&fit=crop&w=800&q=80" alt="診療の様子" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="https://images.unsplash.com/photo-1581585004042-bca38021ce1e?auto=format&fit=crop&w=800&q=80" alt="歯科スタッフのイメージ" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=800&q=80" alt="チームのイメージ" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="診療の様子" width="800" height="600" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="歯科スタッフのイメージ" width="800" height="600" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="チームのイメージ" width="800" height="600" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="診療の様子" width="800" height="600" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="歯科スタッフのイメージ" width="800" height="600" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="チームのイメージ" width="800" height="600" loading="lazy" decoding="async" />
           </div>
         </div>
       </div>
@@ -278,19 +298,20 @@
                 title="桑田歯科医院の地図"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%B8%AD%E5%B8%82%E6%9C%AC%E7%94%BA2%E4%B8%81%E7%9B%AE5-3&output=embed"
+                src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF5%E4%B8%81%E7%9B%AE0-0&output=embed"
               ></iframe>
             </div>
             <div class="mapActions">
               <a
                 class="btn btn--ghost"
-                href="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%B8%AD%E5%B8%82%E6%9C%AC%E7%94%BA2%E4%B8%81%E7%9B%AE5-3"
+                href="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF5%E4%B8%81%E7%9B%AE0-0"
                 target="_blank"
                 rel="noopener"
               >
                 拡大地図を見る
               </a>
             </div>
+            <p class="mapNote">※地図が表示されない場合は、上のリンクからご確認ください。</p>
           </div>
 
           <div class="panel">
@@ -490,6 +511,6 @@
     <a class="btn btn--ghost" data-clinic-tel>電話</a>
   </div>
 
-  <script src="./script.js"></script>
+  <script src="./script.js" defer></script>
 </body>
 </html>
