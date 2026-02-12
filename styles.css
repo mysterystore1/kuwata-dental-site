@@ -1367,6 +1367,13 @@ input:focus, textarea:focus{
   .marquee__item{ width: 160px; }
   .marquee__img{ height: 110px; }
   .heroSlide{ height: clamp(320px, 85vw, 460px); }
+  .heroSlide__img{
+    object-fit: cover;
+    object-position: center;
+  }
+  .heroSlide--contain .heroSlide__img{
+    object-fit: cover;
+  }
   .heroSlide__overlay{
     display: none;
   }
