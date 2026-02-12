@@ -1368,14 +1368,13 @@ input:focus, textarea:focus{
   .marquee__img{ height: 110px; }
   .heroSlide{ height: clamp(320px, 85vw, 460px); }
   .heroSlide__overlay{
-    left: 6%;
-    right: 6%;
-    bottom: 12%;
+    display: none;
   }
   .heroSlide__overlay h1{ font-size: clamp(24px, 6.4vw, 30px); }
   .heroSlide__cta{ flex-direction: column; }
   .heroSlide__cta .btn{ width: 100%; }
-  .heroSlider__controls{ right: 6%; bottom: 56px; }
+  .heroSlider__controls{ right: 10px; bottom: 10px; }
+  .heroSlider__dots{ bottom: 10px; }
   .heroInfo__inner{ grid-template-columns: 1fr; }
   .equipmentGrid{ grid-template-columns: 1fr; }
   .staffDetailGrid{ grid-template-columns: 1fr; }
