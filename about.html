@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>医院名（後で入力）｜当院について</title>
+  <meta name="description" content="医院名（後で入力）。当院についてのご案内。" />
+
+  <meta property="og:title" content="医院名（後で入力）" />
+  <meta property="og:description" content="当院についてのご案内" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body data-page-title="当院について">
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">🦷</span>
+        <span class="brand__text">
+          <span class="brand__name" data-clinic-text="name">医院名（後で入力）</span>
+          <span class="brand__sub" data-clinic-text="nameEn">CLINIC NAME</span>
+        </span>
+      </a>
+
+      <button class="navbtn" id="navbtn" aria-controls="nav" aria-expanded="false">
+        <span class="navbtn__bars" aria-hidden="true"></span>
+        <span class="navbtn__label">メニュー</span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="主要メニュー">
+        <a href="services.html">診療内容</a>
+        <a href="about.html">当院について</a>
+        <a href="access.html">アクセス</a>
+        <a href="faq.html">FAQ</a>
+        <a class="nav__cta" data-clinic-reserve>WEB予約</a>
+        <a class="nav__tel" data-clinic-tel>電話</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="section section--alt" id="about">
+      <div class="container twoCol">
+        <div>
+          <h1 class="sectionTitle">当院について</h1>
+          <p class="sectionLead">“怖い”を減らすのは、技術だけでなくコミュニケーションだと考えています。</p>
+
+          <div class="profile">
+            <img
+              class="media media--doctor"
+              src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=800&q=80"
+              alt="スタッフのイメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div>
+              <p class="profile__name" data-clinic-text="doctorName">院長：◯◯ ◯◯（後で入力）</p>
+              <p class="profile__meta" data-clinic-text="doctorBio">〇〇大学歯学部卒 / 〇〇勤務を経て開院（例）</p>
+            </div>
+          </div>
+
+          <ul class="bullets">
+            <li>治療の前に「いま何が起きているか」を共有</li>
+            <li>痛みが苦手な方は、遠慮なく合図してOK</li>
+            <li>予防で通える医院を目指しています</li>
+          </ul>
+
+          <p class="note">
+            ※医療広告の表現ルールに合わせて、実績・症例・費用は適切に記載してください（ここはダミー文言）。
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3 class="panel__title">初診の流れ（例）</h3>
+          <ol class="steps">
+            <li>問診（痛み/期間/気になる点）</li>
+            <li>検査（必要に応じて撮影など）</li>
+            <li>説明（現状と選択肢、通院回数の目安）</li>
+            <li>治療（応急処置 or 次回予約）</li>
+          </ol>
+          <a class="btn btn--primary btn--full" data-clinic-reserve>WEB予約へ</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
+      <p class="footer__meta">
+        <span data-clinic-text="address">〒000-0000 住所（後で入力）</span>
+        / TEL <a data-clinic-tel>000-0000-0000</a>
+      </p>
+      <div class="footer__cta">
+        <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+        <a class="btn btn--ghost" data-clinic-tel>電話</a>
+      </div>
+      <nav class="footer__nav" aria-label="フッターメニュー">
+        <a href="services.html">診療内容</a>
+        <a href="about.html">当院について</a>
+        <a href="access.html">アクセス</a>
+        <a href="reserve.html">予約</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+    </div>
+  </footer>
+
+  <div class="ctaBar" aria-label="予約ショートカット">
+    <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+    <a class="btn btn--ghost" data-clinic-tel>電話</a>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

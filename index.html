@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>医院名（後で入力）｜地域のかかりつけ歯科</title>
+  <meta name="description" content="医院名（後で入力）。予約案内・アクセス・診療内容のご案内。痛みに配慮し、丁寧な説明を大切にしています。" />
+
+  <meta property="og:title" content="医院名（後で入力）" />
+  <meta property="og:description" content="予約案内・アクセス・診療内容のご案内" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="ja_JP" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="./styles.css" />
+
+  <!-- 構造化データ（後で差し替え） -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dentist",
+    "name": "医院名（後で入力）",
+    "telephone": "000-0000-0000",
+    "address": {
+      "@type": "PostalAddress",
+      "postalCode": "000-0000",
+      "addressRegion": "都道府県（後で入力）",
+      "addressLocality": "市区町村（後で入力）",
+      "streetAddress": "住所（後で入力）"
+    },
+    "areaServed": "エリア（後で入力）",
+    "url": "https://example.com"
+  }
+  </script>
+</head>
+
+<body>
+  <a class="skip" href="#main">本文へスキップ</a>
+
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html">
+        <span class="brand__mark" aria-hidden="true">🦷</span>
+        <span class="brand__text">
+          <span class="brand__name" data-clinic-text="name">医院名（後で入力）</span>
+          <span class="brand__sub" data-clinic-text="nameEn">CLINIC NAME</span>
+        </span>
+      </a>
+
+      <button class="navbtn" id="navbtn" aria-controls="nav" aria-expanded="false">
+        <span class="navbtn__bars" aria-hidden="true"></span>
+        <span class="navbtn__label">メニュー</span>
+      </button>
+
+      <nav class="nav" id="nav" aria-label="主要メニュー">
+        <a href="services.html">診療内容</a>
+        <a href="about.html">当院について</a>
+        <a href="access.html">アクセス</a>
+        <a href="faq.html">FAQ</a>
+        <a class="nav__cta" data-clinic-reserve>WEB予約</a>
+        <a class="nav__tel" data-clinic-tel>電話</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero">
+      <div class="container hero__inner">
+        <div class="hero__copy">
+          <p class="badge">
+            <span data-clinic-text="station">最寄駅 徒歩◯分（後で入力）</span>
+            <span class="badge__sep">｜</span>
+            <span data-clinic-text="hoursShort">平日◯時まで（後で入力）</span>
+          </p>
+          <h1 data-clinic-text="tagline">痛みに配慮した診療と、分かりやすい説明を大切に。</h1>
+          <p class="lead" data-clinic-text="lead">
+            予防から治療まで、必要なことを丁寧にご案内します。<br>
+            まずはお悩みをお聞かせください。
+          </p>
+
+          <div class="hero__cta">
+            <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+            <a class="btn btn--ghost" data-clinic-tel>電話する</a>
+          </div>
+
+          <ul class="hero__points">
+            <li>初診はカウンセリング重視</li>
+            <li>不安な方は治療ペースを相談OK</li>
+            <li>お子さま連れもご相談ください（例）</li>
+          </ul>
+        </div>
+
+        <div class="hero__media">
+          <!-- 画像差し替え: .media--hero / srcはプロジェクト内の相対パスに変更 -->
+          <img
+            class="media media--hero"
+            src="https://images.unsplash.com/photo-1663182120513-9effe46f79f5?auto=format&fit=crop&w=1600&q=80"
+            alt="診療の様子"
+            decoding="async"
+          />
+
+          <div class="hero__card" aria-label="受付案内">
+            <div class="hero__cardTop">
+              <p class="hero__cardTitle">本日の受付</p>
+              <p class="hero__cardSub">混雑状況は目安です</p>
+            </div>
+            <div class="hero__status">
+              <div class="status">
+                <p class="status__label">午前</p>
+                <p class="status__value">△</p>
+                <p class="status__hint">少し混雑</p>
+              </div>
+              <div class="status">
+                <p class="status__label">午後</p>
+                <p class="status__value">◯</p>
+                <p class="status__hint">比較的空き</p>
+              </div>
+            </div>
+            <div class="hero__mini">
+              <p><span class="k">診療</span> <span data-clinic-text="hours">診療時間（後で入力）</span></p>
+              <p><span class="k">休診</span> <span data-clinic-text="closed">休診日（後で入力）</span></p>
+            </div>
+            <a class="btn btn--primary btn--full" data-clinic-reserve>最短で予約する</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="notice">
+      <div class="container notice__inner">
+        <h2 class="sectionTitle">お知らせ</h2>
+        <ul class="notice__list">
+          <li><time datetime="2026-02-01">2026/02/01</time> 診療枠の変更（例）</li>
+          <li><time datetime="2026-01-10">2026/01/10</time> 予防歯科のご案内（例）</li>
+          <li><time datetime="2025-12-20">2025/12/20</time> 年末年始の診療案内（例）</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="container">
+        <h2 class="sectionTitle">診療内容</h2>
+        <p class="sectionLead">よくあるお悩みを分かりやすく。必要な治療だけ、納得したうえで進められるように。</p>
+
+        <div class="mediaWrap">
+          <img
+            class="media media--wide"
+            src="https://images.unsplash.com/photo-1581585004042-bca38021ce1e?auto=format&fit=crop&w=1600&q=80"
+            alt="診療のイメージ"
+            loading="lazy"
+            decoding="async"
+          />
+        </div>
+
+        <ul class="serviceList" id="serviceList">
+          <li class="service">一般歯科（後で入力）</li>
+          <li class="service">予防歯科（後で入力）</li>
+          <li class="service">小児歯科（後で入力）</li>
+          <li class="service">審美歯科（後で入力）</li>
+          <li class="service">入れ歯相談（後で入力）</li>
+          <li class="service">口腔ケア（後で入力）</li>
+        </ul>
+
+        <div class="callout">
+          <p class="callout__title">はじめての方へ</p>
+          <p class="callout__text">
+            「すぐ削る」ではなく、まず状況と選択肢を説明します。<br>
+            予算や通院ペースも含めて、一緒に相談しましょう。
+          </p>
+          <a class="btn btn--ghost" data-clinic-reserve>WEB予約へ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="about">
+      <div class="container twoCol">
+        <div>
+          <h2 class="sectionTitle">当院について</h2>
+          <p class="sectionLead">“怖い”を減らすのは、技術だけでなくコミュニケーションだと考えています。</p>
+
+          <div class="profile">
+            <!-- 画像差し替え: .media--doctor / srcはプロジェクト内の相対パスに変更 -->
+            <img
+              class="media media--doctor"
+              src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=800&q=80"
+              alt="スタッフのイメージ"
+              loading="lazy"
+              decoding="async"
+            />
+            <div>
+              <p class="profile__name" data-clinic-text="doctorName">院長：◯◯ ◯◯（後で入力）</p>
+              <p class="profile__meta" data-clinic-text="doctorBio">〇〇大学歯学部卒 / 〇〇勤務を経て開院（例）</p>
+            </div>
+          </div>
+
+          <ul class="bullets">
+            <li>治療の前に「いま何が起きているか」を共有</li>
+            <li>痛みが苦手な方は、遠慮なく合図してOK</li>
+            <li>予防で通える医院を目指しています</li>
+          </ul>
+
+          <p class="note">
+            ※医療広告の表現ルールに合わせて、実績・症例・費用は適切に記載してください（ここはダミー文言）。
+          </p>
+        </div>
+
+        <div class="panel">
+          <h3 class="panel__title">初診の流れ（例）</h3>
+          <ol class="steps">
+            <li>問診（痛み/期間/気になる点）</li>
+            <li>検査（必要に応じて撮影など）</li>
+            <li>説明（現状と選択肢、通院回数の目安）</li>
+            <li>治療（応急処置 or 次回予約）</li>
+          </ol>
+          <a class="btn btn--primary btn--full" data-clinic-reserve>WEB予約へ</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="staff">
+      <div class="container">
+        <h2 class="sectionTitle">スタッフ紹介</h2>
+        <p class="sectionLead">明るく丁寧な対応を心がけています。ご不安なことがあれば気軽にご相談ください。</p>
+
+        <div class="marquee" aria-label="スタッフ紹介ギャラリー">
+          <div class="marquee__track">
+            <img class="marquee__img" src="https://images.unsplash.com/photo-1663182120513-9effe46f79f5?auto=format&fit=crop&w=800&q=80" alt="診療の様子" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="https://images.unsplash.com/photo-1581585004042-bca38021ce1e?auto=format&fit=crop&w=800&q=80" alt="歯科スタッフのイメージ" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=800&q=80" alt="チームのイメージ" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="https://images.unsplash.com/photo-1663182120513-9effe46f79f5?auto=format&fit=crop&w=800&q=80" alt="診療の様子" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="https://images.unsplash.com/photo-1581585004042-bca38021ce1e?auto=format&fit=crop&w=800&q=80" alt="歯科スタッフのイメージ" loading="lazy" decoding="async" />
+            <img class="marquee__img" src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=800&q=80" alt="チームのイメージ" loading="lazy" decoding="async" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="access">
+      <div class="container">
+        <h2 class="sectionTitle">アクセス・診療時間</h2>
+
+        <div class="grid2">
+          <div class="panel">
+            <h3 class="panel__title">所在地</h3>
+            <p class="kv"><span class="k">住所</span> <span data-clinic-text="address">〒000-0000 住所（後で入力）</span></p>
+            <p class="kv"><span class="k">最寄</span> <span data-clinic-text="station">最寄駅 徒歩◯分（後で入力）</span></p>
+            <p class="kv"><span class="k">電話</span> <a data-clinic-tel>000-0000-0000</a></p>
+
+            <div class="map">
+              <!-- 画像差し替え: .media--map / srcはプロジェクト内の相対パスに変更 -->
+              <img
+                class="media media--map"
+                src="file:///C:/Users/taikan/.cursor/projects/c/assets/c__Users_taikan_AppData_Roaming_Cursor_User_workspaceStorage_8dbb746a03fac20de920e3ccafee9f78_images_image-81b92b02-e601-4761-83dd-998262ab8241.png"
+                alt="看板イメージ"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel__title">診療時間</h3>
+            <p class="kv"><span class="k">診療時間</span> <span data-clinic-text="hours">診療時間（後で入力）</span></p>
+            <p class="kv"><span class="k">休診日</span> <span data-clinic-text="closed">休診日（後で入力）</span></p>
+            <p class="note">※土曜・祝日の診療は医院方針に合わせて記載してください。</p>
+
+            <div class="panel__cta">
+              <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+              <a class="btn btn--ghost" data-clinic-tel>電話</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <h2 class="sectionTitle">よくある質問</h2>
+
+        <div class="faq">
+          <details>
+            <summary>急に痛くなった。今日みてもらえる？</summary>
+            <p>まずはお電話で状況を教えてください。応急処置枠をご案内できる場合があります（例）。</p>
+          </details>
+          <details>
+            <summary>痛いのが苦手。治療が怖い。</summary>
+            <p>不安な方は最初にお伝えください。ペース配分や麻酔の相談をしながら進めます。</p>
+          </details>
+          <details>
+            <summary>初診は予約が必要？</summary>
+            <p>予約優先でご案内しています。WEB予約またはお電話で事前にご連絡ください。</p>
+          </details>
+          <details>
+            <summary>保険診療は対応していますか？</summary>
+            <p>保険診療に対応しています。保険証またはマイナ保険証をご持参ください。</p>
+          </details>
+          <details>
+            <summary>支払い方法は？</summary>
+            <p>保険/自費の範囲や、現金・カード対応などを記載（ここは後で差し替え）。</p>
+          </details>
+          <details>
+            <summary>駐車場はありますか？</summary>
+            <p>駐車場があります（台数に限りがあります）。満車の場合は近隣のコインパーキングをご利用ください。</p>
+          </details>
+          <details>
+            <summary>車いす・ベビーカーで入れますか？</summary>
+            <p>ご不安な方は事前にお電話でご相談ください。入口や導線を確認のうえご案内します。</p>
+          </details>
+          <details>
+            <summary>子ども連れでも大丈夫？</summary>
+            <p>可能です。混雑状況によってご案内が変わる場合があるため、事前にご相談ください。</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="reserve">
+      <div class="container reserve">
+        <div class="reserve__box">
+          <h2 class="sectionTitle">予約・お問い合わせ</h2>
+          <p class="sectionLead">「相談だけ」もOK。状況を聞いたうえで、必要な検査や流れを案内します。</p>
+
+          <div class="reserve__cta">
+            <a class="btn btn--primary" data-clinic-reserve>外部予約ページへ</a>
+            <a class="btn btn--ghost" data-clinic-tel>電話：000-0000-0000</a>
+          </div>
+
+          <div class="divider" aria-hidden="true"></div>
+
+          <form class="form" id="contactForm">
+            <div class="field">
+              <label for="name">お名前</label>
+              <input id="name" name="name" autocomplete="name" required />
+            </div>
+
+            <div class="field">
+              <label for="email">メール</label>
+              <input id="email" name="email" type="email" autocomplete="email" required />
+            </div>
+
+            <div class="field">
+              <label for="tel">電話番号（任意）</label>
+              <input id="tel" name="tel" type="tel" autocomplete="tel" />
+            </div>
+
+            <div class="field">
+              <label for="msg">内容</label>
+              <textarea id="msg" name="msg" rows="5" required></textarea>
+              <p class="help">※個人情報の扱いはプライバシーポリシーに沿って明記してください（例）。</p>
+            </div>
+
+            <!-- 静的サイトなので送信先は後で差し替え
+              1) 外部フォーム(Formspree等) 2) 予約システム 3) サーバー実装
+              ここではデモとしてJSで送信っぽく見せます
+            -->
+            <button class="btn btn--primary btn--full" type="submit">この内容で送る（デモ）</button>
+            <p class="note" id="formNote" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="reserve__side">
+          <div class="panel">
+            <h3 class="panel__title">来院時の持ち物（例）</h3>
+            <ul class="bullets">
+              <li>保険証（またはマイナ保険証）</li>
+              <li>お薬手帳（お持ちの方）</li>
+              <li>紹介状（ある方）</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel__title">感染対策（例）</h3>
+            <ul class="bullets">
+              <li>器具の滅菌・衛生管理</li>
+              <li>換気・空気清浄</li>
+              <li>スタッフの体調管理</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
+      <p class="footer__meta">
+        <span data-clinic-text="address">〒000-0000 住所（後で入力）</span>
+        / TEL <a data-clinic-tel>000-0000-0000</a>
+      </p>
+      <div class="footer__cta">
+        <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+        <a class="btn btn--ghost" data-clinic-tel>電話</a>
+      </div>
+      <nav class="footer__nav" aria-label="フッターメニュー">
+        <a href="services.html">診療内容</a>
+        <a href="about.html">当院について</a>
+        <a href="access.html">アクセス</a>
+        <a href="reserve.html">予約</a>
+      </nav>
+      <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+    </div>
+  </footer>
+
+  <div class="ctaBar" aria-label="予約ショートカット">
+    <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+    <a class="btn btn--ghost" data-clinic-tel>電話</a>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>
