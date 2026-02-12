@@ -37,7 +37,10 @@
       </button>
 
       <nav class="nav" id="nav" aria-label="主要メニュー">
+        <a href="index.html">TOP</a>
         <a href="services.html">診療内容</a>
+        <a href="equipment.html">設備紹介</a>
+        <a href="staff.html">スタッフ紹介</a>
         <a href="about.html">当院について</a>
         <a href="access.html">アクセス</a>
         <a href="faq.html">FAQ</a>
@@ -48,69 +51,195 @@
   </header>
 
   <main id="main">
-    <section class="section section--alt" id="about">
-      <div class="container twoCol">
-        <div>
-          <h1 class="sectionTitle">当院について</h1>
-          <p class="sectionLead">“怖い”を減らすのは、技術だけでなくコミュニケーションだと考えています。</p>
+    <section
+      class="page-hero"
+      style="--page-hero-image: url('https://images.unsplash.com/photo-1663182120513-9effe46f79f5?auto=format&fit=crop&w=1600&q=80');"
+    >
+      <div class="container page-hero__inner">
+        <p class="page-hero__eyebrow">ABOUT</p>
+        <h1>当院について</h1>
+        <p class="page-hero__lead">
+          通いやすさと、分かりやすい説明を大切に。<br>
+          不安を減らし、納得して進められる診療を目指します。
+        </p>
+      </div>
+    </section>
 
-          <div class="profile">
-            <img
-              class="media media--doctor"
-              src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=800&q=80"
-              alt="スタッフのイメージ"
-              loading="lazy"
-              decoding="async"
-            />
-            <div>
-              <p class="profile__name" data-clinic-text="doctorName">院長：◯◯ ◯◯（後で入力）</p>
-              <p class="profile__meta" data-clinic-text="doctorBio">〇〇大学歯学部卒 / 〇〇勤務を経て開院（例）</p>
-            </div>
-          </div>
+    <section class="section section--paper">
+      <div class="container">
+        <nav class="pageNav" aria-label="当院についてのページ内メニュー">
+          <a href="#philosophy">診療理念</a>
+          <a href="#features">当院の特徴</a>
+          <a href="#flow">初診の流れ</a>
+        </nav>
 
-          <ul class="bullets">
-            <li>治療の前に「いま何が起きているか」を共有</li>
-            <li>痛みが苦手な方は、遠慮なく合図してOK</li>
-            <li>予防で通える医院を目指しています</li>
-          </ul>
-
-          <p class="note">
-            ※医療広告の表現ルールに合わせて、実績・症例・費用は適切に記載してください（ここはダミー文言）。
-          </p>
+        <div class="sectionBlock" id="philosophy">
+          <h2 class="sectionBlock__title">診療理念</h2>
+          <ol class="checklist">
+            <li>通いやすく、相談しやすい歯科医院を目指します。</li>
+            <li>好きなものを食べ、会話を楽しむためのサポートを行います。</li>
+            <li>幅広いニーズに対応できるよう、必要に応じた提案を行います。</li>
+            <li>治療前の説明を大切にし、納得したうえで進めます。</li>
+            <li>再治療を防ぐため、丁寧なメンテナンスを重視します。</li>
+          </ol>
         </div>
 
-        <div class="panel">
-          <h3 class="panel__title">初診の流れ（例）</h3>
-          <ol class="steps">
-            <li>問診（痛み/期間/気になる点）</li>
-            <li>検査（必要に応じて撮影など）</li>
-            <li>説明（現状と選択肢、通院回数の目安）</li>
-            <li>治療（応急処置 or 次回予約）</li>
-          </ol>
-          <a class="btn btn--primary btn--full" data-clinic-reserve>WEB予約へ</a>
+        <div class="sectionBlock" id="features">
+          <h2 class="sectionBlock__title">当院の特徴</h2>
+
+          <article class="feature">
+            <div class="feature__media">
+              <img
+                class="feature__img"
+                src="https://images.unsplash.com/photo-1740410643780-883b33ee1b86?auto=format&fit=crop&w=1400&q=80"
+                alt="スタッフのイメージ"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="feature__content">
+              <p class="feature__tag">Feature 01</p>
+              <h3 class="feature__title">通いやすさへの配慮</h3>
+              <p class="feature__text">
+                予約優先でスムーズな案内を心がけています。お困りごとや急な痛みはお電話でご相談ください（例）。
+              </p>
+              <ul class="feature__list">
+                <li>WEB予約 / 電話予約</li>
+                <li>アクセスが分かりやすい立地（駅徒歩圏）</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="feature feature--reverse">
+            <div class="feature__media">
+              <img
+                class="feature__img"
+                src="https://images.unsplash.com/photo-1581585004042-bca38021ce1e?auto=format&fit=crop&w=1400&q=80"
+                alt="診療のイメージ"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="feature__content">
+              <p class="feature__tag">Feature 02</p>
+              <h3 class="feature__title">説明を重視した診療</h3>
+              <p class="feature__text">
+                専門用語はできるだけ避け、現状や選択肢を分かりやすくご説明します。
+              </p>
+              <ul class="feature__list">
+                <li>治療の前に検査結果を共有</li>
+                <li>費用や通院ペースの目安を案内</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="feature__media">
+              <img
+                class="feature__img"
+                src="https://images.unsplash.com/photo-1663182120513-9effe46f79f5?auto=format&fit=crop&w=1400&q=80"
+                alt="院内のイメージ"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="feature__content">
+              <p class="feature__tag">Feature 03</p>
+              <h3 class="feature__title">衛生管理への配慮</h3>
+              <p class="feature__text">
+                器具の衛生管理や院内の清潔維持に配慮しています（例）。
+              </p>
+              <ul class="feature__list">
+                <li>器具の滅菌・消毒</li>
+                <li>換気・清掃の徹底</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+
+        <div class="sectionBlock" id="flow">
+          <h2 class="sectionBlock__title">初診の流れ</h2>
+          <div class="panel panel--light">
+            <ol class="steps">
+              <li>問診（痛み/期間/気になる点）</li>
+              <li>検査（必要に応じて撮影など）</li>
+              <li>説明（現状と選択肢、通院回数の目安）</li>
+              <li>治療（応急処置 or 次回予約）</li>
+            </ol>
+            <a class="btn btn--primary btn--full" data-clinic-reserve>WEB予約へ</a>
+          </div>
+          <p class="note">※内容は医院方針に合わせて調整してください。</p>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
-      <p class="footer__meta">
-        <span data-clinic-text="address">〒000-0000 住所（後で入力）</span>
-        / TEL <a data-clinic-tel>000-0000-0000</a>
-      </p>
-      <div class="footer__cta">
-        <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
-        <a class="btn btn--ghost" data-clinic-tel>電話</a>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__box footer__brandBlock">
+          <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
+          <p class="footer__meta">
+            <span data-clinic-text="address">〒000-0000 住所（後で入力）</span><br>
+            TEL <a data-clinic-tel>000-0000-0000</a>
+          </p>
+          <ul class="footer__notes">
+            <li>各種保険診療取り扱い</li>
+            <li>予約優先でご案内</li>
+            <li>急患はお電話でご相談ください</li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">診療時間</p>
+          <table class="footer__hours">
+            <tbody>
+              <tr>
+                <th>診療時間</th>
+                <td data-clinic-text="hours">診療時間（後で入力）</td>
+              </tr>
+              <tr>
+                <th>休診日</th>
+                <td data-clinic-text="closed">休診日（後で入力）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">ご予約・お問い合わせ</p>
+          <p class="footer__small">ご予約はWEBまたはお電話で承ります。</p>
+          <div class="footer__miniBtns">
+            <a class="btn btn--ghost" data-clinic-tel>電話</a>
+            <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+          </div>
+        </div>
       </div>
-      <nav class="footer__nav" aria-label="フッターメニュー">
-        <a href="services.html">診療内容</a>
-        <a href="about.html">当院について</a>
-        <a href="access.html">アクセス</a>
-        <a href="reserve.html">予約</a>
-      </nav>
-      <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+
+      <div class="footer__ctaRow">
+        <div class="footer__ctaPanel">
+          <p class="footer__ctaTitle">お電話でのご予約</p>
+          <a class="footer__ctaTel" data-clinic-tel>000-0000-0000</a>
+          <p class="footer__ctaNote">受付時間は診療時間内です。</p>
+        </div>
+        <div class="footer__ctaPanel footer__ctaPanel--web">
+          <p class="footer__ctaTitle">インターネット予約（24時間）</p>
+          <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+          <p class="footer__ctaNote">予約ページへお進みください。</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <nav class="footer__nav" aria-label="フッターメニュー">
+          <a href="services.html">診療内容</a>
+          <a href="equipment.html">設備紹介</a>
+          <a href="staff.html">スタッフ紹介</a>
+          <a href="about.html">当院について</a>
+          <a href="access.html">アクセス</a>
+          <a href="reserve.html">予約</a>
+        </nav>
+        <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+      </div>
     </div>
   </footer>
 

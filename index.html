@@ -56,7 +56,10 @@
       </button>
 
       <nav class="nav" id="nav" aria-label="主要メニュー">
+        <a href="index.html">TOP</a>
         <a href="services.html">診療内容</a>
+        <a href="equipment.html">設備紹介</a>
+        <a href="staff.html">スタッフ紹介</a>
         <a href="about.html">当院について</a>
         <a href="access.html">アクセス</a>
         <a href="faq.html">FAQ</a>
@@ -67,63 +70,84 @@
   </header>
 
   <main id="main">
-    <section class="hero">
-      <div class="container hero__inner">
-        <div class="hero__copy">
-          <p class="badge">
-            <span data-clinic-text="station">最寄駅 徒歩◯分（後で入力）</span>
-            <span class="badge__sep">｜</span>
-            <span data-clinic-text="hoursShort">平日◯時まで（後で入力）</span>
-          </p>
-          <h1 data-clinic-text="tagline">痛みに配慮した診療と、分かりやすい説明を大切に。</h1>
-          <p class="lead" data-clinic-text="lead">
-            予防から治療まで、必要なことを丁寧にご案内します。<br>
-            まずはお悩みをお聞かせください。
-          </p>
+    <section class="hero hero--carousel">
+      <div class="heroSlider" data-hero-carousel>
+        <div class="heroSlider__track">
+          <article class="heroSlide">
+            <img
+              class="heroSlide__img"
+              src="file:///C:/Users/taikan/.cursor/projects/c/assets/c__Users_taikan_AppData_Roaming_Cursor_User_workspaceStorage_8dbb746a03fac20de920e3ccafee9f78_images_image-c7502ec6-6fb7-4d3a-9783-c46e8be7e7df.png"
+              alt="女性モデル（イメージ）"
+              decoding="async"
+            />
+            <div class="heroSlide__overlay">
+              <p class="heroSlide__tag" data-clinic-text="nameEn">KUWADA Dental Clinic</p>
+              <h1>
+                美しく健康な口元は、<br>
+                自分の歯で「噛む」ことから
+              </h1>
+              <span class="heroSlide__line" aria-hidden="true"></span>
+              <p class="heroSlide__lead">
+                痛みに配慮し、分かりやすい説明を大切にしています。
+              </p>
+              <div class="heroSlide__cta">
+                <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+                <a class="btn btn--ghost" data-clinic-tel>電話する</a>
+              </div>
+            </div>
+          </article>
 
-          <div class="hero__cta">
-            <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
-            <a class="btn btn--ghost" data-clinic-tel>電話する</a>
-          </div>
+          <article class="heroSlide heroSlide--contain">
+            <img
+              class="heroSlide__img"
+              src="file:///C:/Users/taikan/.cursor/projects/c/assets/c__Users_taikan_AppData_Roaming_Cursor_User_workspaceStorage_8dbb746a03fac20de920e3ccafee9f78_images_image-d504f18f-f2b2-4519-ac23-524f883403ee.png"
+              alt="診療方針のビジュアル"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
 
-          <ul class="hero__points">
-            <li>初診はカウンセリング重視</li>
-            <li>不安な方は治療ペースを相談OK</li>
-            <li>お子さま連れもご相談ください（例）</li>
-          </ul>
+          <article class="heroSlide heroSlide--contain">
+            <img
+              class="heroSlide__img"
+              src="file:///C:/Users/taikan/.cursor/projects/c/assets/c__Users_taikan_AppData_Roaming_Cursor_User_workspaceStorage_8dbb746a03fac20de920e3ccafee9f78_images_image-bdec2bc0-a7a3-4df0-8ee2-e0aa7c31f4a2.png"
+              alt="診療方針のビジュアル"
+              loading="lazy"
+              decoding="async"
+            />
+          </article>
         </div>
 
-        <div class="hero__media">
-          <!-- 画像差し替え: .media--hero / srcはプロジェクト内の相対パスに変更 -->
-          <img
-            class="media media--hero"
-            src="https://images.unsplash.com/photo-1663182120513-9effe46f79f5?auto=format&fit=crop&w=1600&q=80"
-            alt="診療の様子"
-            decoding="async"
-          />
 
-          <div class="hero__card" aria-label="受付案内">
-            <div class="hero__cardTop">
-              <p class="hero__cardTitle">本日の受付</p>
-              <p class="hero__cardSub">混雑状況は目安です</p>
-            </div>
-            <div class="hero__status">
-              <div class="status">
-                <p class="status__label">午前</p>
-                <p class="status__value">△</p>
-                <p class="status__hint">少し混雑</p>
-              </div>
-              <div class="status">
-                <p class="status__label">午後</p>
-                <p class="status__value">◯</p>
-                <p class="status__hint">比較的空き</p>
-              </div>
-            </div>
-            <div class="hero__mini">
-              <p><span class="k">診療</span> <span data-clinic-text="hours">診療時間（後で入力）</span></p>
-              <p><span class="k">休診</span> <span data-clinic-text="closed">休診日（後で入力）</span></p>
-            </div>
-            <a class="btn btn--primary btn--full" data-clinic-reserve>最短で予約する</a>
+        <div class="heroSlider__dots" aria-hidden="true">
+          <span class="heroDot is-active"></span>
+          <span class="heroDot"></span>
+          <span class="heroDot"></span>
+        </div>
+      </div>
+
+      <div class="heroInfo">
+        <div class="container heroInfo__inner">
+          <div class="heroInfo__item">
+            <p class="heroInfo__label">診療時間</p>
+            <ul class="heroInfo__list">
+              <li>月・火・水・金 <span data-clinic-text="hoursWeekday">9:00-13:00 / 15:00-19:00</span></li>
+              <li>土 <span data-clinic-text="hoursSat">9:00-13:00 / 15:00-17:00</span></li>
+            </ul>
+          </div>
+          <div class="heroInfo__item">
+            <p class="heroInfo__label">休診日</p>
+            <ul class="heroInfo__list">
+              <li><span data-clinic-text="closed">木・日・祝</span></li>
+              <li>※祝日の診療は医院方針に合わせて記載</li>
+            </ul>
+          </div>
+          <div class="heroInfo__item">
+            <p class="heroInfo__label">最寄駅</p>
+            <ul class="heroInfo__list">
+              <li data-clinic-text="stationMain">南武線 府中本町 徒歩3分</li>
+              <li data-clinic-text="stationSub">京王線 府中 徒歩10分 / 京王線 分倍河原 徒歩10分</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -249,15 +273,23 @@
             <p class="kv"><span class="k">最寄</span> <span data-clinic-text="station">最寄駅 徒歩◯分（後で入力）</span></p>
             <p class="kv"><span class="k">電話</span> <a data-clinic-tel>000-0000-0000</a></p>
 
-            <div class="map">
-              <!-- 画像差し替え: .media--map / srcはプロジェクト内の相対パスに変更 -->
-              <img
-                class="media media--map"
-                src="file:///C:/Users/taikan/.cursor/projects/c/assets/c__Users_taikan_AppData_Roaming_Cursor_User_workspaceStorage_8dbb746a03fac20de920e3ccafee9f78_images_image-81b92b02-e601-4761-83dd-998262ab8241.png"
-                alt="看板イメージ"
+            <div class="mapEmbed" aria-label="Googleマップ">
+              <iframe
+                title="桑田歯科医院の地図"
                 loading="lazy"
-                decoding="async"
-              />
+                referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%B8%AD%E5%B8%82%E6%9C%AC%E7%94%BA2%E4%B8%81%E7%9B%AE5-3&output=embed"
+              ></iframe>
+            </div>
+            <div class="mapActions">
+              <a
+                class="btn btn--ghost"
+                href="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%B8%AD%E5%B8%82%E6%9C%AC%E7%94%BA2%E4%B8%81%E7%9B%AE5-3"
+                target="_blank"
+                rel="noopener"
+              >
+                拡大地図を見る
+              </a>
             </div>
           </div>
 
@@ -385,23 +417,71 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
-      <p class="footer__meta">
-        <span data-clinic-text="address">〒000-0000 住所（後で入力）</span>
-        / TEL <a data-clinic-tel>000-0000-0000</a>
-      </p>
-      <div class="footer__cta">
-        <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
-        <a class="btn btn--ghost" data-clinic-tel>電話</a>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__box footer__brandBlock">
+          <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
+          <p class="footer__meta">
+            <span data-clinic-text="address">〒000-0000 住所（後で入力）</span><br>
+            TEL <a data-clinic-tel>000-0000-0000</a>
+          </p>
+          <ul class="footer__notes">
+            <li>各種保険診療取り扱い</li>
+            <li>予約優先でご案内</li>
+            <li>急患はお電話でご相談ください</li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">診療時間</p>
+          <table class="footer__hours">
+            <tbody>
+              <tr>
+                <th>診療時間</th>
+                <td data-clinic-text="hours">診療時間（後で入力）</td>
+              </tr>
+              <tr>
+                <th>休診日</th>
+                <td data-clinic-text="closed">休診日（後で入力）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">ご予約・お問い合わせ</p>
+          <p class="footer__small">ご予約はWEBまたはお電話で承ります。</p>
+          <div class="footer__miniBtns">
+            <a class="btn btn--ghost" data-clinic-tel>電話</a>
+            <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+          </div>
+        </div>
       </div>
-      <nav class="footer__nav" aria-label="フッターメニュー">
-        <a href="services.html">診療内容</a>
-        <a href="about.html">当院について</a>
-        <a href="access.html">アクセス</a>
-        <a href="reserve.html">予約</a>
-      </nav>
-      <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+
+      <div class="footer__ctaRow">
+        <div class="footer__ctaPanel">
+          <p class="footer__ctaTitle">お電話でのご予約</p>
+          <a class="footer__ctaTel" data-clinic-tel>000-0000-0000</a>
+          <p class="footer__ctaNote">受付時間は診療時間内です。</p>
+        </div>
+        <div class="footer__ctaPanel footer__ctaPanel--web">
+          <p class="footer__ctaTitle">インターネット予約（24時間）</p>
+          <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+          <p class="footer__ctaNote">予約ページへお進みください。</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <nav class="footer__nav" aria-label="フッターメニュー">
+          <a href="services.html">診療内容</a>
+          <a href="equipment.html">設備紹介</a>
+          <a href="staff.html">スタッフ紹介</a>
+          <a href="about.html">当院について</a>
+          <a href="access.html">アクセス</a>
+          <a href="reserve.html">予約</a>
+        </nav>
+        <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+      </div>
     </div>
   </footer>
 

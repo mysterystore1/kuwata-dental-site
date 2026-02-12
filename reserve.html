@@ -37,7 +37,10 @@
       </button>
 
       <nav class="nav" id="nav" aria-label="主要メニュー">
+        <a href="index.html">TOP</a>
         <a href="services.html">診療内容</a>
+        <a href="equipment.html">設備紹介</a>
+        <a href="staff.html">スタッフ紹介</a>
         <a href="about.html">当院について</a>
         <a href="access.html">アクセス</a>
         <a href="faq.html">FAQ</a>
@@ -116,23 +119,71 @@
   </main>
 
   <footer class="footer">
-    <div class="container footer__inner">
-      <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
-      <p class="footer__meta">
-        <span data-clinic-text="address">〒000-0000 住所（後で入力）</span>
-        / TEL <a data-clinic-tel>000-0000-0000</a>
-      </p>
-      <div class="footer__cta">
-        <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
-        <a class="btn btn--ghost" data-clinic-tel>電話</a>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__box footer__brandBlock">
+          <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
+          <p class="footer__meta">
+            <span data-clinic-text="address">〒000-0000 住所（後で入力）</span><br>
+            TEL <a data-clinic-tel>000-0000-0000</a>
+          </p>
+          <ul class="footer__notes">
+            <li>各種保険診療取り扱い</li>
+            <li>予約優先でご案内</li>
+            <li>急患はお電話でご相談ください</li>
+          </ul>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">診療時間</p>
+          <table class="footer__hours">
+            <tbody>
+              <tr>
+                <th>診療時間</th>
+                <td data-clinic-text="hours">診療時間（後で入力）</td>
+              </tr>
+              <tr>
+                <th>休診日</th>
+                <td data-clinic-text="closed">休診日（後で入力）</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="footer__box">
+          <p class="footer__title">ご予約・お問い合わせ</p>
+          <p class="footer__small">ご予約はWEBまたはお電話で承ります。</p>
+          <div class="footer__miniBtns">
+            <a class="btn btn--ghost" data-clinic-tel>電話</a>
+            <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+          </div>
+        </div>
       </div>
-      <nav class="footer__nav" aria-label="フッターメニュー">
-        <a href="services.html">診療内容</a>
-        <a href="about.html">当院について</a>
-        <a href="access.html">アクセス</a>
-        <a href="reserve.html">予約</a>
-      </nav>
-      <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+
+      <div class="footer__ctaRow">
+        <div class="footer__ctaPanel">
+          <p class="footer__ctaTitle">お電話でのご予約</p>
+          <a class="footer__ctaTel" data-clinic-tel>000-0000-0000</a>
+          <p class="footer__ctaNote">受付時間は診療時間内です。</p>
+        </div>
+        <div class="footer__ctaPanel footer__ctaPanel--web">
+          <p class="footer__ctaTitle">インターネット予約（24時間）</p>
+          <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+          <p class="footer__ctaNote">予約ページへお進みください。</p>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <nav class="footer__nav" aria-label="フッターメニュー">
+          <a href="services.html">診療内容</a>
+          <a href="equipment.html">設備紹介</a>
+          <a href="staff.html">スタッフ紹介</a>
+          <a href="about.html">当院について</a>
+          <a href="access.html">アクセス</a>
+          <a href="reserve.html">予約</a>
+        </nav>
+        <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+      </div>
     </div>
   </footer>
 
