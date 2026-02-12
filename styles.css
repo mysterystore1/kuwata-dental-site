@@ -209,7 +209,7 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
 .heroSlide__img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
   filter: brightness(1.02) contrast(1.02);
 }
@@ -221,7 +221,7 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
   content:"";
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(15, 23, 42, 0.15), rgba(15, 23, 42, 0.45));
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.05), rgba(15, 23, 42, 0.18));
 }
 .heroSlide__overlay{
   position: absolute;
@@ -229,13 +229,19 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
   bottom: 14%;
   z-index: 2;
   max-width: 560px;
-  color: #fff;
-  text-shadow: 0 8px 18px rgba(15, 23, 42, 0.35);
+  color: var(--text);
+  text-shadow: none;
+  background: rgba(255,255,255,0.74);
+  border: 1px solid rgba(255,255,255,0.6);
+  backdrop-filter: blur(6px);
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-sm);
 }
 .heroSlide__tag{
   font-size: 12px;
   letter-spacing: 0.2em;
-  color: rgba(255,255,255,0.75);
+  color: var(--muted);
   margin: 0 0 8px;
 }
 .heroSlide__overlay h1{
@@ -247,12 +253,12 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
   display: block;
   width: 160px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
   margin: 10px 0 12px;
 }
 .heroSlide__lead{
   margin: 0 0 14px;
-  color: rgba(255,255,255,0.82);
+  color: var(--muted);
 }
 .heroSlide__cta{
   display: flex;
@@ -389,8 +395,62 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
   border-radius: var(--radius);
   background: linear-gradient(180deg, var(--surface), var(--soft2));
   border: 1px solid var(--border);
-  object-fit: cover;
+  object-fit: contain;
   box-shadow: var(--shadow-sm);
+}
+/* ===== Media Frame (NO CROP) ===== */
+.mediaFrame{
+  --img: none; /* 背景用（ぼかし）画像URLをここに入れる */
+  position: relative;
+  overflow: hidden;
+  border-radius: var(--radius);
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+}
+
+/* 余白を上品に：同じ画像を薄くぼかして敷く（都会系向け） */
+.mediaFrame::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image: var(--img);
+  background-size: cover;
+  background-position: center;
+  filter: blur(18px) brightness(0.95);
+  transform: scale(1.08);
+  opacity: 0.30;
+  pointer-events: none;
+}
+
+/* 画像は必ず全体表示（切れない） */
+.mediaFrame > img,
+.mediaFrame picture > img{
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;        /* ←切らない */
+  object-position: center;
+}
+
+/* ratio utility */
+.ratio-16x9{ aspect-ratio: 16 / 9; }
+.ratio-3x2 { aspect-ratio:  3 / 2; }
+.ratio-4x3 { aspect-ratio:  4 / 3; }
+.ratio-4x5 { aspect-ratio:  4 / 5; }
+.ratio-1x1 { aspect-ratio:  1 / 1; }
+
+@media (prefers-reduced-motion: reduce){
+  .mediaFrame::before{ filter: none; } /* ぼかし負荷を軽減したい場合 */
+}
+
+/* もし既存で cover が入っている可能性があるため保険（必要なら調整） */
+.heroSlide__img,
+.equipmentCard__media img,
+.staffGallery img{
+  object-fit: contain !important;
 }
 /* 画像差し替え: .media--hero / .media--doctor / .media--map */
 .media--hero{
@@ -462,9 +522,7 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
   display: flex;
   align-items: flex-end;
   background: var(--surface2);
-  background-image: var(--page-hero-image);
-  background-size: cover;
-  background-position: center;
+  background-image: none;
   border-bottom: 1px solid var(--border);
 }
 .page-hero::before{
@@ -575,7 +633,7 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
 .feature__img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .feature__tag{
@@ -731,7 +789,7 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
 .staffProfile__img{
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   display: block;
 }
 .staffProfile__content{
@@ -810,7 +868,7 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
   width: 100%;
   height: 100%;
   aspect-ratio: 1 / 1.2;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: var(--radius-sm);
   border: 1px solid var(--border);
 }
@@ -953,6 +1011,12 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
   width: max-content;
   animation: marquee 28s linear infinite;
 }
+.marquee--reverse .marquee__track{
+  animation-direction: reverse;
+}
+.marquee--services .marquee__item{
+  width: 260px;
+}
 .marquee__item{
   flex: 0 0 auto;
   width: 220px;
@@ -960,7 +1024,7 @@ a:hover{ text-decoration: underline; text-decoration-color: var(--accent); }
 .marquee__img{
   width: 100%;
   height: 140px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 14px;
   border: 1px solid var(--border);
 }

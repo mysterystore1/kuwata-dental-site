@@ -3,21 +3,29 @@ const clinic = {
   nameEn: "KUWADA Dental Clinic",
   tagline: "説明重視・予防重視の診療で、安心して通える歯科医院を目指します。",
   lead: "一般歯科・小児歯科・歯科口腔外科に対応。必要性を確認しながら丁寧にご案内します。",
-  address: "〒160-0023 東京都新宿区西新宿5丁目0-0",
-  station: "西新宿五丁目駅 徒歩5分 / 都庁前駅 徒歩10分",
-  stationMain: "西新宿五丁目駅 徒歩5分",
-  stationSub: "都庁前駅 徒歩10分",
-  phone: "03-0000-0000",
-  phoneTel: "0300000000",
+  address: "〒183-0027 東京都府中市本町2丁目5-3",
+  addressEn: "2-5-3 Hommachi, Fuchu-shi, Tokyo",
+  station: "南武線 府中本町 徒歩3分 / 京王線 府中 徒歩10分（京王バス 本町二丁目バス停 徒歩1分） / 京王線 分倍河原 徒歩10分",
+  stationMain: "南武線 府中本町 徒歩3分",
+  stationSub: "京王線 府中 徒歩10分 / 京王線 分倍河原 徒歩10分",
+  phone: "042-366-6605",
+  phoneTel: "0423666605",
+  phoneNight: "042-366-6698",
+  phoneFax: "042-366-6605",
+  reservationPhone: "042-366-6605",
+  reservationNote: "基本的に予約診療です（初診・再診で実施）。飛び込み来院や緊急性のある電話は対象外となる場合があります。",
+  parking: "駐車場あり（無料5台）",
+  smokingPolicy: "受動喫煙防止のため、敷地内全面禁煙",
+  aed: "AED設置あり",
   hours: "月・火・水・金 9:00-13:00 / 15:00-19:00、土 9:00-13:00 / 15:00-17:00",
   hoursWeekday: "9:00-13:00 / 15:00-19:00",
   hoursSat: "9:00-13:00 / 15:00-17:00",
   hoursShort: "平日19時まで / 土曜17時まで",
   closed: "木・日・祝",
-  doctorName: "院長：桑田 徹",
-  doctorBio: "プロフィールは後で入力（例）",
+  doctorName: "院長：桑田 淳",
+  doctorBio: "くわた あつし / Kuwata Atsushi",
   reserveUrl: "reserve.html",
-  description: "桑田歯科医院。一般歯科・小児歯科・歯科口腔外科などに対応。予約・アクセス・診療時間のご案内。",
+  description: "桑田歯科医院（府中市本町／府中本町駅徒歩3分）。一般歯科・小児歯科・歯科口腔外科などに対応。予約・アクセス・診療時間のご案内。",
   services: [
     {
       title: "一般歯科",
@@ -156,7 +164,7 @@ const renderServices = () => {
 const pageTitle = document.body?.dataset?.pageTitle;
 document.title = pageTitle
   ? `${clinic.name}｜${pageTitle}`
-  : `${clinic.name}｜西新宿五丁目駅徒歩5分`;
+  : `${clinic.name}｜府中本町駅徒歩3分`;
 const desc = document.querySelector('meta[name="description"]');
 if (desc) desc.setAttribute("content", clinic.description);
 const ogTitle = document.querySelector('meta[property="og:title"]');
@@ -169,6 +177,7 @@ setText('[data-clinic-text="nameEn"]', clinic.nameEn);
 setText('[data-clinic-text="tagline"]', clinic.tagline);
 setText('[data-clinic-text="lead"]', clinic.lead);
 setText('[data-clinic-text="address"]', clinic.address);
+setText('[data-clinic-text="addressEn"]', clinic.addressEn);
 setText('[data-clinic-text="station"]', clinic.station);
 setText('[data-clinic-text="hours"]', clinic.hours);
 setText('[data-clinic-text="hoursWeekday"]', clinic.hoursWeekday);
@@ -179,6 +188,13 @@ setText('[data-clinic-text="stationMain"]', clinic.stationMain);
 setText('[data-clinic-text="stationSub"]', clinic.stationSub);
 setText('[data-clinic-text="doctorName"]', clinic.doctorName);
 setText('[data-clinic-text="doctorBio"]', clinic.doctorBio);
+setText('[data-clinic-text="phoneNight"]', clinic.phoneNight);
+setText('[data-clinic-text="phoneFax"]', clinic.phoneFax);
+setText('[data-clinic-text="reservationPhone"]', clinic.reservationPhone);
+setText('[data-clinic-text="reservationNote"]', clinic.reservationNote);
+setText('[data-clinic-text="parking"]', clinic.parking);
+setText('[data-clinic-text="smokingPolicy"]', clinic.smokingPolicy);
+setText('[data-clinic-text="aed"]', clinic.aed);
 
 setTel();
 setReserve();

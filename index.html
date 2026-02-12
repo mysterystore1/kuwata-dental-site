@@ -18,16 +18,16 @@
   {
     "@context": "https://schema.org",
     "@type": "Dentist",
-    "name": "医院名（後で入力）",
-    "telephone": "000-0000-0000",
+    "name": "桑田歯科医院",
+    "telephone": "042-366-6605",
     "address": {
       "@type": "PostalAddress",
-      "postalCode": "000-0000",
-      "addressRegion": "都道府県（後で入力）",
-      "addressLocality": "市区町村（後で入力）",
-      "streetAddress": "住所（後で入力）"
+      "postalCode": "183-0027",
+      "addressRegion": "東京都",
+      "addressLocality": "府中市",
+      "streetAddress": "本町2丁目5-3"
     },
-    "areaServed": "エリア（後で入力）",
+    "areaServed": "府中市",
     "url": "https://example.com"
   }
   </script>
@@ -78,15 +78,17 @@
       >
         <div class="heroSlider__track" role="list">
           <article class="heroSlide">
-            <img
-              class="heroSlide__img"
-              src="./assets/images/placeholder-16x9.svg"
-              alt="院内の雰囲気"
-              width="1600"
-              height="900"
-              fetchpriority="high"
-              decoding="async"
-            />
+            <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/hero/hero-01.png');">
+              <img
+                class="heroSlide__img"
+                src="./assets/images/hero/hero-01.png"
+                alt="院内の雰囲気"
+                width="1600"
+                height="900"
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
             <div class="heroSlide__overlay">
               <p class="heroSlide__tag" data-clinic-text="nameEn">KUWADA Dental Clinic</p>
               <h1>
@@ -105,27 +107,61 @@
           </article>
 
           <article class="heroSlide heroSlide--contain">
-            <img
-              class="heroSlide__img"
-              src="./assets/images/placeholder-16x9.svg"
-              alt="診療の様子"
-              width="1600"
-              height="900"
-              loading="lazy"
-              decoding="async"
-            />
+            <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/hero/hero-02.png');">
+              <img
+                class="heroSlide__img"
+                src="./assets/images/hero/hero-02.png"
+                alt="診療の様子"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="heroSlide__overlay">
+              <p class="heroSlide__tag" data-clinic-text="nameEn">KUWADA Dental Clinic</p>
+              <h1>
+                美しく健康な口元は、<br>
+                自分の歯で「噛む」ことから
+              </h1>
+              <span class="heroSlide__line" aria-hidden="true"></span>
+              <p class="heroSlide__lead">
+                痛みに配慮し、分かりやすい説明を大切にしています。
+              </p>
+              <div class="heroSlide__cta">
+                <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+                <a class="btn btn--ghost" data-clinic-tel>電話する</a>
+              </div>
+            </div>
           </article>
 
           <article class="heroSlide heroSlide--contain">
-            <img
-              class="heroSlide__img"
-              src="./assets/images/placeholder-16x9.svg"
-              alt="スタッフの雰囲気"
-              width="1600"
-              height="900"
-              loading="lazy"
-              decoding="async"
-            />
+            <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/hero/hero-03.png');">
+              <img
+                class="heroSlide__img"
+                src="./assets/images/hero/hero-03.png"
+                alt="スタッフの雰囲気"
+                width="1600"
+                height="900"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
+            <div class="heroSlide__overlay">
+              <p class="heroSlide__tag" data-clinic-text="nameEn">KUWADA Dental Clinic</p>
+              <h1>
+                美しく健康な口元は、<br>
+                自分の歯で「噛む」ことから
+              </h1>
+              <span class="heroSlide__line" aria-hidden="true"></span>
+              <p class="heroSlide__lead">
+                痛みに配慮し、分かりやすい説明を大切にしています。
+              </p>
+              <div class="heroSlide__cta">
+                <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+                <a class="btn btn--ghost" data-clinic-tel>電話する</a>
+              </div>
+            </div>
           </article>
         </div>
 
@@ -185,16 +221,39 @@
         <h2 class="sectionTitle">診療内容</h2>
         <p class="sectionLead">よくあるお悩みを分かりやすく。必要な治療だけ、納得したうえで進められるように。</p>
 
-        <div class="mediaWrap">
-          <img
-            class="media media--wide"
-            src="./assets/images/placeholder-16x9.svg"
-            alt="診療のイメージ"
-            width="1600"
-            height="900"
-            loading="lazy"
-            decoding="async"
-          />
+        <div class="marquee marquee--reverse marquee--services" aria-label="診療風景ギャラリー">
+          <div class="marquee__track">
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/services/service-02.png');">
+                <img class="marquee__img" src="./assets/images/services/service-02.png" alt="診療風景" width="1600" height="900" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/services/service-02.png');">
+                <img class="marquee__img" src="./assets/images/services/service-02.png" alt="診療風景" width="1600" height="900" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/services/service-02.png');">
+                <img class="marquee__img" src="./assets/images/services/service-02.png" alt="診療風景" width="1600" height="900" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/services/service-02.png');">
+                <img class="marquee__img" src="./assets/images/services/service-02.png" alt="診療風景" width="1600" height="900" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/services/service-02.png');">
+                <img class="marquee__img" src="./assets/images/services/service-02.png" alt="診療風景" width="1600" height="900" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-16x9" style="--img:url('./assets/images/services/service-02.png');">
+                <img class="marquee__img" src="./assets/images/services/service-02.png" alt="診療風景" width="1600" height="900" loading="lazy" decoding="async" />
+              </div>
+            </div>
+          </div>
         </div>
 
         <ul class="serviceList" id="serviceList">
@@ -224,16 +283,17 @@
           <p class="sectionLead">“怖い”を減らすのは、技術だけでなくコミュニケーションだと考えています。</p>
 
           <div class="profile">
-            <!-- 画像差し替え: .media--doctor / srcはプロジェクト内の相対パスに変更 -->
-            <img
-              class="media media--doctor"
-              src="./assets/images/placeholder-1x1.svg"
-              alt="院長プロフィール写真"
-              width="800"
-              height="800"
-              loading="lazy"
-              decoding="async"
-            />
+            <div class="mediaFrame ratio-1x1" style="--img:url('./assets/images/director.png');">
+              <img
+                class="media media--doctor"
+                src="./assets/images/director.png"
+                alt="院長プロフィール写真"
+                width="800"
+                height="1200"
+                loading="lazy"
+                decoding="async"
+              />
+            </div>
             <div>
               <p class="profile__name" data-clinic-text="doctorName">院長：◯◯ ◯◯（後で入力）</p>
               <p class="profile__meta" data-clinic-text="doctorBio">〇〇大学歯学部卒 / 〇〇勤務を経て開院（例）</p>
@@ -271,12 +331,66 @@
 
         <div class="marquee" aria-label="スタッフ紹介ギャラリー">
           <div class="marquee__track">
-            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="診療の様子" width="800" height="600" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="歯科スタッフのイメージ" width="800" height="600" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="チームのイメージ" width="800" height="600" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="診療の様子" width="800" height="600" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="歯科スタッフのイメージ" width="800" height="600" loading="lazy" decoding="async" />
-            <img class="marquee__img" src="./assets/images/placeholder-16x9.svg" alt="チームのイメージ" width="800" height="600" loading="lazy" decoding="async" />
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-01.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-01.png" alt="スタッフ写真1" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-02.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-02.png" alt="スタッフ写真2" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-03.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-03.png" alt="スタッフ写真3" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-04.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-04.png" alt="スタッフ写真4" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-05.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-05.png" alt="スタッフ写真5" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-06.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-06.png" alt="スタッフ写真6" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-07.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-07.png" alt="スタッフ写真7" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-08.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-08.png" alt="スタッフ写真8" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-09.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-09.png" alt="スタッフ写真9" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-10.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-10.png" alt="スタッフ写真10" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-11.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-11.png" alt="スタッフ写真11" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
+            <div class="marquee__item">
+              <div class="mediaFrame ratio-4x5" style="--img:url('./assets/images/staff/staff-12.png');">
+                <img class="marquee__img" src="./assets/images/staff/staff-12.png" alt="スタッフ写真12" width="900" height="1200" loading="lazy" decoding="async" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -298,13 +412,13 @@
                 title="桑田歯科医院の地図"
                 loading="lazy"
                 referrerpolicy="no-referrer-when-downgrade"
-                src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF5%E4%B8%81%E7%9B%AE0-0&output=embed"
+                src="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%B8%AD%E5%B8%82%E6%9C%AC%E7%94%BA2%E4%B8%81%E7%9B%AE5-3&output=embed"
               ></iframe>
             </div>
             <div class="mapActions">
               <a
                 class="btn btn--ghost"
-                href="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E6%96%B0%E5%AE%BF%E5%8C%BA%E8%A5%BF%E6%96%B0%E5%AE%BF5%E4%B8%81%E7%9B%AE0-0"
+                href="https://www.google.com/maps?q=%E6%9D%B1%E4%BA%AC%E9%83%BD%E5%BA%9C%E4%B8%AD%E5%B8%82%E6%9C%AC%E7%94%BA2%E4%B8%81%E7%9B%AE5-3"
                 target="_blank"
                 rel="noopener"
               >
