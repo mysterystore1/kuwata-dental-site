@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>インプラント相談ページ | くわら歯科クリニック</title>
+  <meta name="description" content="インプラント相談専用ページ。適応判断、外科処置の流れ、費用目安、術後メンテナンスをくわら歯科クリニックがご案内します。" />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body data-page-title="インプラント相談ページ">
+  <a class="skip" href="#main">本文へスキップ</a>
+  <header class="header">
+    <div class="container header__inner">
+      <a class="brand" href="index.html"><span class="brand__mark" aria-hidden="true">🦷</span><span class="brand__text"><span class="brand__name" data-clinic-text="name">くわら歯科クリニック</span><span class="brand__sub" data-clinic-text="nameEn">KUWARA Dental Clinic</span></span></a>
+      <button class="navbtn" id="navbtn" aria-controls="nav" aria-expanded="false"><span class="navbtn__bars" aria-hidden="true"></span><span class="navbtn__label">メニュー</span></button>
+      <nav class="nav" id="nav" aria-label="主要メニュー"><a href="index.html">TOP</a><a href="services.html">診療内容</a><a href="equipment.html">設備紹介</a> <a class="nav__reserveHub" href="./reserve.html">予約・お問い合わせ</a></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container page-hero__inner">
+        <p class="breadcrumb"><a href="./index.html">ホーム</a><span>/</span><span aria-current="page">インプラント相談ページ</span></p>
+        <p class="page-hero__eyebrow">IMPLANT CONSULTATION</p>
+        <h1>インプラント相談（自費）</h1>
+        <p class="page-hero__lead">骨量・全身状態・咬合を確認したうえで、適応と治療の見通しを説明します。術後のメンテナンス計画まで含めてご提案します。</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid2">
+        <article class="panel">
+          <h2 class="panel__title">相談で確認する内容</h2>
+          <ul class="checklist">
+            <li>欠損部位と咬合バランス</li>
+            <li>骨量・歯周状態</li>
+            <li>治療期間（手術〜補綴）</li>
+            <li>費用目安とメンテナンス計画</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <h2 class="panel__title">治療ステップ（概要）</h2>
+          <ol class="steps">
+            <li>検査・診断・計画説明</li>
+            <li>一次手術（必要時は骨造成）</li>
+            <li>治癒期間後に補綴処置</li>
+            <li>定期メンテナンスへ移行</li>
+          </ol>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section--alt">
+      <div class="container panel">
+        <h2 class="panel__title">相談予約</h2>
+        <p class="sectionLead">インプラント相談は検査時間確保のため予約制です。服薬中の薬がある方は予約時にお知らせください。</p>
+        <div class="panel__cta">
+          <a class="btn btn--primary" data-clinic-web>WEBで相談予約</a>
+          <a class="btn btn--line" data-clinic-reserve>LINEで相談予約</a>
+          <a class="btn btn--ghost" data-clinic-tel>電話で相談</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container"><div class="footer__bottom"><nav class="footer__nav" aria-label="フッターメニュー"><a href="index.html">TOP</a><a href="lp-ortho-consultation.html">矯正相談ページ</a><a href="reserve.html">予約</a></nav><p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">KUWARA Dental Clinic</span></p></div></div></footer>
+  <div class="ctaBar" aria-label="予約ショートカット"><a class="btn btn--ghost" data-clinic-tel>緊急電話</a><a class="btn btn--primary" data-clinic-web>WEB予約</a><a class="btn btn--line" data-clinic-reserve>LINE予約</a></div>
+  <script src="./script.js" defer></script>
+</body>
+</html>
+

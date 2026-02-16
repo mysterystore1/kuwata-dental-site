@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>医院名（後で入力）｜予約・お問い合わせ</title>
-  <meta name="description" content="医院名（後で入力）。予約・お問い合わせのご案内。" />
+  <title>くわら歯科クリニック｜予約・お問い合わせ</title>
+  <meta name="description" content="くわら歯科クリニック。予約・お問い合わせのご案内。" />
 
-  <meta property="og:title" content="医院名（後で入力）" />
+  <meta property="og:title" content="くわら歯科クリニック" />
   <meta property="og:description" content="予約・お問い合わせのご案内" />
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="ja_JP" />
@@ -22,8 +22,8 @@
       <a class="brand" href="index.html">
         <span class="brand__mark" aria-hidden="true">🦷</span>
         <span class="brand__text">
-          <span class="brand__name" data-clinic-text="name">医院名（後で入力）</span>
-          <span class="brand__sub" data-clinic-text="nameEn">CLINIC NAME</span>
+          <span class="brand__name" data-clinic-text="name">くわら歯科クリニック</span>
+          <span class="brand__sub" data-clinic-text="nameEn">KUWARA Dental Clinic</span>
         </span>
       </a>
 
@@ -32,17 +32,7 @@
         <span class="navbtn__label">メニュー</span>
       </button>
 
-      <nav class="nav" id="nav" aria-label="主要メニュー">
-        <a href="index.html">TOP</a>
-        <a href="services.html">診療内容</a>
-        <a href="equipment.html">設備紹介</a>
-        <a href="staff.html">スタッフ紹介</a>
-        <a href="about.html">当院について</a>
-        <a href="access.html">アクセス</a>
-        <a href="faq.html">FAQ</a>
-        <a class="nav__cta" data-clinic-reserve>WEB予約</a>
-        <a class="nav__tel" data-clinic-tel>電話</a>
-      </nav>
+      <nav class="nav" id="nav" aria-label="主要メニュー"><a href="index.html">TOP</a> <a href="services.html">診療内容</a> <a href="equipment.html">設備紹介</a> <a href="staff.html">スタッフ紹介</a> <a href="about.html">当院について</a> <a href="access.html">アクセス</a> <a href="faq.html">FAQ</a> <a class="nav__reserveHub" href="./reserve.html">予約・お問い合わせ</a></nav>
     </div>
   </header>
 
@@ -51,11 +41,23 @@
       <div class="container reserve">
         <div class="reserve__box">
           <h1 class="sectionTitle">予約・お問い合わせ</h1>
-          <p class="sectionLead">「相談だけ」もOK。状況を聞いたうえで、必要な検査や流れを案内します。</p>
+          <p class="sectionLead">LINEは24時間受付です。受診前のご相談にも対応しています。</p>
 
           <div class="reserve__cta">
-            <a class="btn btn--primary" data-clinic-reserve>外部予約ページへ</a>
-            <a class="btn btn--ghost" data-clinic-tel>電話：000-0000-0000</a>
+            <a class="btn btn--primary" data-clinic-web>WEB予約</a>
+            <a class="btn btn--line" data-clinic-reserve>LINE予約</a>
+            <a class="btn btn--ghost" data-clinic-tel>電話：042-366-6605</a>
+          </div>
+
+          <div class="lineGuide">
+            <p class="lineGuide__title">LINE予約の流れ</p>
+            <ol class="lineGuide__steps">
+              <li>「LINE予約」ボタンから友だち追加</li>
+              <li>お名前・症状・希望日時を送信</li>
+              <li>スタッフ返信で予約確定</li>
+            </ol>
+            <p class="lineGuide__id">LINE ID: <strong data-clinic-text="lineId">@kuwara-dental</strong></p>
+            <p class="lineGuide__note" data-clinic-text="lineNote">※LINEは24時間受付です。返信は診療時間内に順次ご案内します。</p>
           </div>
 
           <div class="divider" aria-hidden="true"></div>
@@ -67,46 +69,119 @@
             </div>
 
             <div class="field">
-              <label for="email">メール</label>
-              <input id="email" name="email" type="email" autocomplete="email" required />
+              <label for="email">メール（任意）</label>
+              <input id="email" name="email" type="email" autocomplete="email" />
             </div>
 
             <div class="field">
-              <label for="tel">電話番号（任意）</label>
-              <input id="tel" name="tel" type="tel" autocomplete="tel" />
+              <label for="tel">電話番号（必須）</label>
+              <input id="tel" name="tel" type="tel" autocomplete="tel" required />
             </div>
 
             <div class="field">
-              <label for="msg">内容</label>
-              <textarea id="msg" name="msg" rows="5" required></textarea>
-              <p class="help">※個人情報の扱いはプライバシーポリシーに沿って明記してください（例）。</p>
+              <label for="preferredDate">希望日（必須）</label>
+              <input id="preferredDate" name="preferredDate" type="date" required />
+            </div>
+
+            <div class="fieldRow">
+              <div class="field">
+                <label for="visitType">来院区分（必須）</label>
+                <select id="visitType" name="visitType" required>
+                  <option value="">選択してください</option>
+                  <option value="first">初診</option>
+                  <option value="return">再診</option>
+                  <option value="consultation">相談（矯正・インプラント等）</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="preferredTime">希望時間帯（任意）</label>
+                <select id="preferredTime" name="preferredTime">
+                  <option value="">いつでも可</option>
+                  <option value="morning">午前（9:00-12:00）</option>
+                  <option value="afternoon">午後（14:00-17:00）</option>
+                  <option value="evening">夕方（17:00以降・平日のみ）</option>
+                </select>
+              </div>
+
+              <div class="field">
+                <label for="urgency">緊急度（任意）</label>
+                <select id="urgency" name="urgency">
+                  <option value="normal">通常</option>
+                  <option value="soon">1-2日以内に受診希望</option>
+                  <option value="urgent">本日中に相談したい</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="field">
+              <label for="msg">症状・相談内容（任意）</label>
+              <textarea id="msg" name="msg" rows="4" placeholder="例：左下奥歯が痛い、矯正相談希望"></textarea>
+              <p class="help">※個人情報の扱いはプライバシーポリシーに沿って明記してください。</p>
             </div>
 
             <!-- 静的サイトなので送信先は後で差し替え
               1) 外部フォーム(Formspree等) 2) 予約システム 3) サーバー実装
               ここではデモとしてJSで送信っぽく見せます
             -->
-            <button class="btn btn--primary btn--full" type="submit">この内容で送る（デモ）</button>
+            <button class="btn btn--primary btn--full" type="submit">予約希望を送信する</button>
             <p class="note" id="formNote" aria-live="polite"></p>
           </form>
+
+          <section class="followupPanel" data-reserve-followup hidden aria-live="polite">
+            <div class="followupPanel__head">
+              <h3 class="followupPanel__title">予約後フォロー</h3>
+              <p class="followupPanel__status" data-followup-status>送信待ち</p>
+            </div>
+            <p class="followupPanel__summary" data-followup-summary></p>
+            <ol class="followupTimeline" data-followup-steps></ol>
+            <div class="followupActions">
+              <a class="btn btn--line" data-clinic-reserve data-followup-action="line_supplement">LINEで追加情報を送る</a>
+              <a class="btn btn--primary" data-clinic-web data-followup-action="web_update">WEB予約内容を確認する</a>
+              <a class="btn btn--ghost" data-clinic-tel data-followup-action="phone_emergency">緊急電話</a>
+            </div>
+            <ul class="followupMini">
+              <li>送信後の自動返信に不備がある場合は、LINEで受付番号を添えてご連絡ください。</li>
+              <li>強い痛み・腫れなどの急性症状は電話を優先してください。</li>
+            </ul>
+          </section>
         </div>
 
         <aside class="reserve__side">
           <div class="panel">
-            <h3 class="panel__title">来院時の持ち物（例）</h3>
+            <h3 class="panel__title">LINE予約時に送る内容</h3>
             <ul class="bullets">
-              <li>保険証（またはマイナ保険証）</li>
-              <li>お薬手帳（お持ちの方）</li>
-              <li>紹介状（ある方）</li>
+              <li>お名前（フルネーム）</li>
+              <li>初診/再診の別</li>
+              <li>希望日時（第2希望まで）</li>
+              <li>気になる症状（簡単でOK）</li>
             </ul>
           </div>
 
           <div class="panel">
-            <h3 class="panel__title">感染対策（例）</h3>
+            <h3 class="panel__title">感染対策</h3>
             <ul class="bullets">
               <li>器具の滅菌・衛生管理</li>
               <li>換気・空気清浄</li>
               <li>スタッフの体調管理</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel__title">受付対応の目安</h3>
+            <ul class="bullets">
+              <li>LINE返信: 診療時間内30分以内を目標</li>
+              <li>WEB予約確認: 当日中に折返し連絡</li>
+              <li>緊急症状はお電話で優先的に状況を確認</li>
+            </ul>
+          </div>
+
+          <div class="panel">
+            <h3 class="panel__title">予約後のフォロー体制</h3>
+            <ul class="bullets">
+              <li>予約受付後に受付番号を発行し、確認連絡へ進みます。</li>
+              <li>症状と希望時間を確認後、来院準備と所要時間の目安をご案内します。</li>
+              <li>前日確認で当日の流れを再案内し、無断キャンセルを防止します。</li>
             </ul>
           </div>
         </aside>
@@ -118,10 +193,10 @@
     <div class="container">
       <div class="footer__top">
         <div class="footer__box footer__brandBlock">
-          <p class="footer__brand" data-clinic-text="name">医院名（後で入力）</p>
+          <p class="footer__brand" data-clinic-text="name">くわら歯科クリニック</p>
           <p class="footer__meta">
-            <span data-clinic-text="address">〒000-0000 住所（後で入力）</span><br>
-            TEL <a data-clinic-tel>000-0000-0000</a>
+            <span data-clinic-text="address">〒183-0027 東京都府中市本町2丁目5-3</span><br>
+            TEL <a data-clinic-tel>042-366-6605</a>
           </p>
           <ul class="footer__notes">
             <li>各種保険診療取り扱い</li>
@@ -136,11 +211,11 @@
             <tbody>
               <tr>
                 <th>診療時間</th>
-                <td data-clinic-text="hours">診療時間（後で入力）</td>
+                <td data-clinic-text="hours">月・火・水・金 9:00-13:00 / 15:00-19:00、土 9:00-13:00 / 15:00-17:00</td>
               </tr>
               <tr>
                 <th>休診日</th>
-                <td data-clinic-text="closed">休診日（後で入力）</td>
+                <td data-clinic-text="closed">木・日・祝</td>
               </tr>
             </tbody>
           </table>
@@ -148,10 +223,10 @@
 
         <div class="footer__box">
           <p class="footer__title">ご予約・お問い合わせ</p>
-          <p class="footer__small">ご予約はWEBまたはお電話で承ります。</p>
+          <p class="footer__small">ご予約はLINEまたはお電話で承ります。</p>
           <div class="footer__miniBtns">
             <a class="btn btn--ghost" data-clinic-tel>電話</a>
-            <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
+            <a class="btn btn--line" data-clinic-reserve>LINE予約</a>
           </div>
         </div>
       </div>
@@ -159,13 +234,13 @@
       <div class="footer__ctaRow">
         <div class="footer__ctaPanel">
           <p class="footer__ctaTitle">お電話でのご予約</p>
-          <a class="footer__ctaTel" data-clinic-tel>000-0000-0000</a>
+          <a class="footer__ctaTel" data-clinic-tel>042-366-6605</a>
           <p class="footer__ctaNote">受付時間は診療時間内です。</p>
         </div>
         <div class="footer__ctaPanel footer__ctaPanel--web">
-          <p class="footer__ctaTitle">インターネット予約（24時間）</p>
-          <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
-          <p class="footer__ctaNote">予約ページへお進みください。</p>
+          <p class="footer__ctaTitle">LINE予約（24時間）</p>
+          <a class="btn btn--line" data-clinic-reserve>LINE予約</a>
+          <p class="footer__ctaNote">友だち追加後、チャットで希望日時をお送りください。</p>
         </div>
       </div>
 
@@ -178,16 +253,19 @@
           <a href="access.html">アクセス</a>
           <a href="reserve.html">予約</a>
         </nav>
-        <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">CLINIC NAME</span></p>
+        <p class="footer__copy">© <span id="year"></span> <span data-clinic-text="nameEn">KUWARA Dental Clinic</span></p>
       </div>
     </div>
   </footer>
 
   <div class="ctaBar" aria-label="予約ショートカット">
-    <a class="btn btn--primary" data-clinic-reserve>WEB予約</a>
-    <a class="btn btn--ghost" data-clinic-tel>電話</a>
+    <a class="btn btn--ghost" data-clinic-tel>緊急電話</a>
+    <a class="btn btn--primary" data-clinic-web>WEB予約</a>
+    <a class="btn btn--line" data-clinic-reserve>LINE予約</a>
   </div>
 
   <script src="./script.js" defer></script>
 </body>
 </html>
+
+
