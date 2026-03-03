@@ -1,0 +1,22 @@
+# dependencies
+node_modules/
+
+# env
+.env
+.env.*
+!.env.example
+
+# IDE / AI tools
+.claude/
+.cursor/
+_shared/
+.cursorrules
+
+# OS
+.DS_Store
+Thumbs.db
+
+# temp
+*.log
+*.tmp
+*.bak
